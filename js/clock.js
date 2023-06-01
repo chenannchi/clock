@@ -5,7 +5,7 @@
 // variables
 let now = new Date()
 let year = now.getFullYear()
-let month = now.getMonth()
+let month = now.getMonth() + 1
 let date = now.getDate()
 let hours = now.getHours()
 let minutes = now.getMinutes()
@@ -28,13 +28,9 @@ let secondsEl = document.getElementById("seconds")
 
 
 // functions
-function init(){
-  // console.log(date)
-  // console.log(time)
-  // console.log(year)
-
+function init() {
   yearEl.textContent = year
-  monthEl.textContent = month+"月"
+  monthEl.textContent = month + "月"
   dateEl.textContent = date
   hoursEl.textContent = hours
   minutesEl.textContent = minutes
@@ -43,8 +39,23 @@ function init(){
   render()
 }
 
-function render(){
+function render() {
+  year = new Date().getFullYear()
+  month = new Date().getMonth() + 1
+  date = new Date().getDate()
+  hours = new Date().getHours()
+  minutes = new Date().getMinutes()
+  seconds = new Date().getSeconds()
+  // console.log(seconds)
+  yearEl.textContent = year
+  monthEl.textContent = month + "月"
+  dateEl.textContent = date
+  hoursEl.textContent = hours
+  minutesEl.textContent = minutes
+  secondsEl.textContent = seconds
 
+  // render()
 }
 
 init()
+let run = setInterval(render, 1000);

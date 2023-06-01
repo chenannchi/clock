@@ -1,0 +1,28 @@
+body {
+  min-height: 92vh;
+  background-color: rgb(2, 69, 2);
+  color: burlywood;
+  font-weight: 600;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#left,
+#right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#date-container {
+  border: 2px burlywood dotted;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
